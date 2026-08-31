@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Все проекты — Слава Журин</title>
+<title>Лидерство — Слава Журин</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -249,6 +249,59 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 .outlink h3{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 108,'wght' 720;font-size:1.3rem;letter-spacing:-0.025em;margin-bottom:8px}
 .outlink p{color:var(--ink-2);font-size:0.96rem;max-width:52ch}
 
+
+/* ============ ЛИДЕРСТВО ============ */
+:root{--shot-pad:18px}
+.ld-hero{padding-top:calc(var(--sec-y) + 56px);padding-bottom:calc(var(--sec-y) * 0.5)}
+.ld-hero h1{font-size:clamp(2.3rem,5.2vw,4.1rem);max-width:19ch}
+.ld-lead{margin-top:28px;max-width:60ch;color:var(--ink-2);font-size:1.06rem}
+
+/* три факта строкой, без карточек */
+.facts{display:grid;grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}
+.fact{padding:32px 34px 32px 0;border-right:1px solid var(--hairline)}
+.fact:last-child{border-right:none}
+.fact:not(:first-child){padding-left:34px}
+.fact .ft{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 108,'wght' 720;
+  font-size:1.1rem;letter-spacing:-0.02em;margin-bottom:9px}
+.fact p{color:var(--ink-2);font-size:0.94rem}
+
+/* инициативы — редакционный разворот, без боксов */
+.init{padding:66px 0;border-bottom:1px solid var(--hairline)}
+.init:first-child{border-top:1px solid var(--hairline)}
+.init-top{display:grid;grid-template-columns:.82fr 1.18fr;gap:58px;align-items:start}
+.init-head{position:sticky;top:104px}
+.init-n{display:block;font-family:'JetBrains Mono',monospace;font-size:0.71rem;
+  letter-spacing:.16em;color:var(--ink-3);margin-bottom:14px}
+.init-head h2{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 112,'wght' 780;
+  font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-0.04em;line-height:1.06;max-width:14ch}
+.init-sub{margin-top:16px;color:var(--accent);font-size:0.97rem;font-weight:500;max-width:30ch}
+
+.blk + .blk{margin-top:30px}
+.blk-l{font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:11px}
+.blk p{color:var(--ink-2);font-size:1.01rem;max-width:56ch}
+.blk p + p{margin-top:13px}
+.blk p b{color:var(--ink);font-weight:600}
+.blk-sol{padding:26px 28px;border-radius:var(--r-md);background:var(--ghost);
+  border-left:3px solid var(--accent)}
+.blk-sol .blk-l{margin-bottom:12px}
+
+.res{list-style:none;display:flex;flex-direction:column;gap:11px}
+.res li{position:relative;padding-left:24px;color:var(--ink-2);font-size:1.01rem;max-width:56ch}
+.res li::before{content:"";position:absolute;left:0;top:10px;width:11px;height:2px;
+  border-radius:2px;background:var(--accent)}
+
+/* полоса скриншотов под инициативой */
+.shots{margin-top:48px;display:grid;gap:48px 44px}
+.shots.two{grid-template-columns:repeat(2,1fr)}
+.shots.three{grid-template-columns:repeat(3,1fr)}
+.fig .shot{min-height:0;aspect-ratio:16/10;padding:var(--shot-pad)}
+.shots.one .fig .shot{aspect-ratio:2/1}
+.fig figcaption{margin-top:13px;padding-left:var(--shot-pad);
+  font-family:'JetBrains Mono',monospace;font-size:0.68rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+
 /* ============ RESPONSIVE ============ */
 @media (max-width:1040px){
   :root{--sec-y:92px;--head-gap:40px;--group-gap:44px;--foot-gap:56px}
@@ -266,6 +319,15 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
   .pcard.is-wide .pc-shot{aspect-ratio:16/10}
   .pc-shot.r-square,.pc-shot.r-tall,.pc-shot.r-pano{aspect-ratio:16/10}
   .outlink{flex-direction:column;align-items:flex-start;gap:20px}
+  .facts{grid-template-columns:1fr;border-bottom:none}
+  .fact{padding:24px 0;border-right:none;border-bottom:1px solid var(--hairline)}
+  .fact:not(:first-child){padding-left:0}
+  .init{padding:44px 0}
+  .init-top{grid-template-columns:1fr;gap:26px}
+  .init-head{position:static}
+  .shots{margin-top:30px}
+  .shots,.shots.two,.shots.three{grid-template-columns:1fr;gap:34px}
+  .fig .shot,.shots.one .fig .shot{aspect-ratio:16/10}
   .contact-actions{grid-template-columns:1fr}
   .acc-trig,.acc-inner{grid-template-columns:32px 1fr;gap:12px}
 }
@@ -300,7 +362,7 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
   <div class="bar">
     <a class="brand" href="index.html#top"><span class="spark">✦</span>Слава Журин</a>
     <nav class="nav">
-      <a class="is-active" href="projects.html">Проекты</a>
+      <a href="projects.html">Проекты</a>
       <a href="leadership.html">Лидерство</a>
       <a href="/lab">Лаборатория</a>
       <a href="index.html#about">О&nbsp;себе</a>
@@ -316,182 +378,263 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a class="is-active" href="projects.html">Проекты</a><a href="leadership.html">Лидерство</a><a href="/lab">Лаборатория</a><a href="index.html#about">О&nbsp;себе</a><a href="#contact">Контакты</a>
+    <a href="projects.html">Проекты</a><a href="leadership.html">Лидерство</a><a href="/lab">Лаборатория</a><a href="index.html#about">О&nbsp;себе</a><a href="#contact">Контакты</a>
   </div>
 </header>
 
 <div id="top">
 
-  <!-- HERO -->
-  <section class="pg-hero">
+  <section class="ld-hero">
     <div class="container">
-      <div class="label">Портфолио</div>
-      <h1 class="display">Все проекты</h1>
-      <p class="pg-lead">Здесь нет концептов «в&nbsp;стол». Всё, что ниже, дошло до&nbsp;реальных пользователей&nbsp;— со&nbsp;спорами, компромиссами, дедлайнами и&nbsp;факапами, на&nbsp;которых я&nbsp;учился.</p>
+      <div class="label">Лидерство</div>
+      <h1 class="display">Выстраиваю процессы, в&nbsp;которых команде удобно работать</h1>
+      <p class="ld-lead">Дизайн-лидерство&nbsp;— это не&nbsp;только макеты. Это порядок: как приходит новый человек, где лежат файлы, по&nbsp;каким правилам принимается качество и&nbsp;как мы&nbsp;проверяем, что в&nbsp;ПРОМ вышло именно то, что нарисовано.</p>
     </div>
   </section>
 
-  <!-- ПРОДУКТОВЫЙ ДИЗАЙН -->
-  <section id="product">
+  <section>
     <div class="container">
-      <div class="group-head rv">
-        <div class="label">Продуктовый дизайн</div>
-        <span class="count">01—08</span>
-      </div>
-
-      <div class="pgrid">
-        <a class="pcard rv" href="case-project-1.html">
-          <div class="pc-shot" aria-hidden="true">
-            <div class="shot-frame">
-              <div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div>
-              <div class="shot-body">
-                <div class="shot-side"><b></b><b></b><b></b><b></b></div>
-                <div class="shot-main"><div class="row w45 acc"></div><div class="row"></div><div class="row w70"></div><div class="row tall"></div><div class="shot-cta"><span></span><span></span></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="pc-body">
-            <div class="pc-top"><span class="pc-num">01</span><span class="chip">B2B</span><span class="chip">Валютный контроль</span></div>
-            <h3>Переписка для&nbsp;целей валютного контроля</h3>
-            <p class="pc-desc">Сценарии передачи документов в&nbsp;банк: написать письмо, получить ответ, посмотреть переписку по&nbsp;конкретному документу. Расширенный поиск, статусы писем, роли составителя и&nbsp;подписанта.</p>
-            <span class="pc-link">Смотреть кейс <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
-          </div>
-        </a>
-
-        <a class="pcard rv" href="case-project-2.html">
-          <div class="pc-shot" aria-hidden="true">
-            <div class="shot-frame">
-              <div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div>
-              <div class="shot-body">
-                <div class="shot-side"><b></b><b></b><b></b><b></b></div>
-                <div class="shot-main"><div class="row w70"></div><div class="row tall acc"></div><div class="row"></div><div class="row w45"></div><div class="shot-cta"><span></span><span></span></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="pc-body">
-            <div class="pc-top"><span class="pc-num">02</span><span class="chip">B2B</span><span class="chip">Уведомления</span></div>
-            <h3>Подключение уведомлений валютного контроля</h3>
-            <p class="pc-desc">Услуга, которая заранее предупреждает клиента о&nbsp;сроках и&nbsp;возможных нарушениях: карточка услуги в&nbsp;профиле, СМС и&nbsp;почта, подключение ответственных сотрудников.</p>
-            <span class="pc-link">Смотреть кейс <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
-          </div>
-        </a>
-
-        <a class="pcard rv" href="case-project-3.html">
-          <div class="pc-shot" aria-hidden="true">
-            <div class="shot-frame">
-              <div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div>
-              <div class="shot-body">
-                <div class="shot-side"><b></b><b></b><b></b><b></b></div>
-                <div class="shot-main"><div class="row"></div><div class="row w45"></div><div class="row tall"></div><div class="row w70 acc"></div><div class="shot-cta"><span></span><span></span></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="pc-body">
-            <div class="pc-top"><span class="pc-num">03</span><span class="chip">B2E</span><span class="chip">Внутренний инструмент</span></div>
-            <h3>Рабочее место валютного контролёра</h3>
-            <p class="pc-desc">Список задач, детальная информация, связанные задачи и&nbsp;карточка клиента в&nbsp;одном окне. Руководитель распределяет поток более 2500&nbsp;задач в&nbsp;день.</p>
-            <span class="pc-link">Смотреть кейс <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
-          </div>
-        </a>
-
-        <a class="pcard rv" href="case-project-4.html">
-          <div class="pc-shot" aria-hidden="true">
-            <div class="shot-frame">
-              <div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div>
-              <div class="shot-body">
-                <div class="shot-side"><b></b><b></b><b></b><b></b></div>
-                <div class="shot-main"><div class="row w30 acc"></div><div class="row tall"></div><div class="row w70"></div><div class="row"></div><div class="shot-cta"><span></span><span></span></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="pc-body">
-            <div class="pc-top"><span class="pc-num">04</span><span class="chip">B2E</span><span class="chip">Паттерн интерфейса</span></div>
-            <h3>Фильтры</h3>
-            <p class="pc-desc">Фильтрация по&nbsp;любому элементу интерфейса, персональная настройка набора перетаскиванием, быстрый отбор просроченных задач и&nbsp;сброс всего одним действием.</p>
-            <span class="pc-link">Смотреть кейс <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
-          </div>
-        </a>
-
-        <a class="pcard rv" href="case-project-5.html">
-          <div class="pc-shot" aria-hidden="true">
-            <div class="shot-frame">
-              <div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div>
-              <div class="shot-body">
-                <div class="shot-side"><b></b><b></b><b></b><b></b></div>
-                <div class="shot-main"><div class="row w70 acc"></div><div class="row"></div><div class="row w45"></div><div class="row tall"></div><div class="shot-cta"><span></span><span></span></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="pc-body">
-            <div class="pc-top"><span class="pc-num">05</span><span class="chip">B2E</span><span class="chip">Внутренний инструмент</span></div>
-            <h3>Запросы валютного контроля</h3>
-            <p class="pc-desc">Темы и&nbsp;подтемы запроса с&nbsp;готовым шаблоном письма, все запросы и&nbsp;ответы клиента по&nbsp;документу в&nbsp;одном месте, быстрый просмотр присланных файлов.</p>
-            <span class="pc-link">Смотреть кейс <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
-          </div>
-        </a>
-
-        <a class="pcard rv" href="case-project-6.html">
-          <div class="pc-shot" aria-hidden="true">
-            <div class="shot-frame">
-              <div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div>
-              <div class="shot-body">
-                <div class="shot-side"><b></b><b></b><b></b><b></b></div>
-                <div class="shot-main"><div class="row tall"></div><div class="row w45 acc"></div><div class="row"></div><div class="row w70"></div><div class="shot-cta"><span></span><span></span></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="pc-body">
-            <div class="pc-top"><span class="pc-num">06</span><span class="chip">B2E</span><span class="chip">Договоры</span></div>
-            <h3>Договоры клиентов</h3>
-            <p class="pc-desc">Поиск клиента по&nbsp;нескольким стратегиям, карточка клиента и&nbsp;древовидная структура договоров со&nbsp;связанными соглашениями. Единая форма просмотра и&nbsp;редактирования по&nbsp;блокам.</p>
-            <span class="pc-link">Смотреть кейс <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
-          </div>
-        </a>
-
-        <a class="pcard rv" href="case-project-7.html">
-          <div class="pc-shot" aria-hidden="true">
-            <div class="shot-frame">
-              <div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div>
-              <div class="shot-body">
-                <div class="shot-side"><b></b><b></b><b></b><b></b></div>
-                <div class="shot-main"><div class="row w45"></div><div class="row acc"></div><div class="row tall"></div><div class="row w70"></div><div class="shot-cta"><span></span><span></span></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="pc-body">
-            <div class="pc-top"><span class="pc-num">07</span><span class="chip">B2E</span><span class="chip">Платежи</span></div>
-            <h3>Платёжные инструкции</h3>
-            <p class="pc-desc">Всё для выполнения задачи&nbsp;— внутри задачи: интегрированный поиск агента с&nbsp;автозаполнением полей, динамическая валидация по&nbsp;всем формам, подсказки для новых сотрудников.</p>
-            <span class="pc-link">Смотреть кейс <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
-          </div>
-        </a>
-
-        <a class="pcard rv" href="case-project-8.html">
-          <div class="pc-shot" aria-hidden="true">
-            <div class="shot-frame">
-              <div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div>
-              <div class="shot-body">
-                <div class="shot-side"><b></b><b></b><b></b><b></b></div>
-                <div class="shot-main"><div class="row"></div><div class="row w70 acc"></div><div class="row tall"></div><div class="row w45"></div><div class="shot-cta"><span></span><span></span></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="pc-body">
-            <div class="pc-top"><span class="pc-num">08</span><span class="chip">B2E</span><span class="chip">Паттерн интерфейса</span></div>
-            <h3>Пошаговая форма обработки</h3>
-            <p class="pc-desc">Переработка перегруженной формы в&nbsp;пошаговую: на&nbsp;экране только текущий шаг, валидация на&nbsp;переходе, итоговый документ на&nbsp;последнем шаге.</p>
-            <span class="pc-link">Смотреть кейс <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
-          </div>
-        </a>
-      </div>
-
-      <div class="outlink rv">
-        <div>
-          <h3>Графика, полиграфия и&nbsp;визуальные работы</h3>
-          <p>Ранние работы из&nbsp;ритейла и&nbsp;айдентика пока живут на&nbsp;Behance. Постепенно перенесу сюда то, что стоит показать полностью.</p>
+      <div class="facts rv">
+        <div class="fact">
+          <div class="ft">Быстрый старт новичка</div>
+          <p>Онбординг в&nbsp;Confluence и&nbsp;личное наставничество: новый дизайнер выходит на&nbsp;полную нагрузку со&nbsp;второго месяца.</p>
         </div>
-        <a class="btn btn-soft btn-lg" href="https://www.behance.net/sensore620" target="_blank" rel="noopener">Смотреть на&nbsp;Behance <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <div class="fact">
+          <div class="ft">Единый стандарт</div>
+          <p>Дизайн-система в&nbsp;Figma и&nbsp;библиотека компонентов в&nbsp;React с&nbsp;документацией.</p>
+        </div>
+        <div class="fact">
+          <div class="ft">Меньше правок</div>
+          <p>Чек-лист макетов и&nbsp;регулярное дизайн-ревью сократили доработки на&nbsp;этапе разработки.</p>
+        </div>
       </div>
+
+      <div class="group-head rv" style="margin-top:var(--group-gap)">
+        <div class="label">Инициативы</div>
+        <span class="count">01—06</span>
+      </div>
+
+      <article class="init rv">
+        <div class="init-top">
+        <div class="init-head">
+          <span class="init-n">01</span>
+          <h2>Онбординг</h2>
+          <p class="init-sub">Забота о&nbsp;команде&nbsp;— инвестиция в&nbsp;стабильность и&nbsp;качество проектов</p>
+        </div>
+
+        <div class="init-body">
+          <div class="blk">
+            <div class="blk-l">Задача</div>
+            <p>В&nbsp;крупных компаниях с&nbsp;усиленной безопасностью и&nbsp;сложными процессами новому дизайнеру особенно трудно: помимо продукта приходится разбираться с&nbsp;доступом к&nbsp;стендам ИФТ и&nbsp;ПСИ, настройкой ВПН, получением прав к&nbsp;дизайн-системам. Это отнимает силы и&nbsp;время, мешая сосредоточиться на&nbsp;главном.</p>
+          </div>
+
+          <div class="blk blk-sol">
+            <div class="blk-l">Решение</div>
+            <p>Я&nbsp;создал в&nbsp;Confluence страницу онбординга для дизайнеров кластера. Там собраны ответы на&nbsp;все частые вопросы, инструкции по&nbsp;получению доступов и&nbsp;настройке рабочих инструментов. Регулярно поддерживаю её&nbsp;в&nbsp;актуальном состоянии и&nbsp;лично помогаю новым коллегам освоиться в&nbsp;продукте.</p>
+            <p>Это позволяет новичкам сосредоточиться на&nbsp;главном&nbsp;— на&nbsp;продукте и&nbsp;задачах, а&nbsp;не&nbsp;на&nbsp;бюрократии.</p>
+          </div>
+
+          <div class="blk">
+            <div class="blk-l">Результат</div>
+            <ul class="res">
+              <li>Уже на&nbsp;второй месяц выходит на&nbsp;полноценную рабочую нагрузку</li>
+              <li>Успешно проходит испытательный срок</li>
+              <li>Сохраняет мотивацию и&nbsp;лояльность к&nbsp;компании</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+
+        <div class="shots three">
+        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row w45 acc"></div><div class="row"></div><div class="row w70"></div><div class="row tall"></div></div></div></div></div><figcaption>Ответы на частые вопросы</figcaption></figure>
+        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70"></div><div class="row tall acc"></div><div class="row w45"></div></div></div></div></div><figcaption>База знаний в карточках</figcaption></figure>
+        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row"></div><div class="row w45 acc"></div><div class="row tall"></div></div></div></div></div><figcaption>Дизайн-процесс в команде</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="init rv">
+        <div class="init-top">
+        <div class="init-head">
+          <span class="init-n">02</span>
+          <h2>Карта макетов</h2>
+          <p class="init-sub">Понятная система хранения макетов для эффективной работы команды</p>
+        </div>
+
+        <div class="init-body">
+          <div class="blk">
+            <div class="blk-l">Задача</div>
+            <p>Когда продукт растёт, количество макетов увеличивается вместе с&nbsp;черновиками и&nbsp;экспериментами. Без чёткой и&nbsp;понятной системы команда тратит много времени на&nbsp;поиск нужного файла.</p>
+          </div>
+
+          <div class="blk blk-sol">
+            <div class="blk-l">Решение</div>
+            <p>Я&nbsp;разработал систему карты макетов в&nbsp;формате User&nbsp;Flow. Каждый макет&nbsp;— это кликабельная плашка со&nbsp;статусом (в&nbsp;работе, на&nbsp;фризе, готов к&nbsp;разработке и&nbsp;т.д.), которая ведёт в&nbsp;редактор. Это помогает сразу видеть взаимосвязи между экранами, что особенно важно в&nbsp;сложных B2B-продуктах.</p>
+          </div>
+
+          <div class="blk">
+            <div class="blk-l">Результат</div>
+            <ul class="res">
+              <li>Любой член команды быстро находит нужные макеты</li>
+              <li>Все видят текущий статус работы и&nbsp;связи между экранами</li>
+              <li>Система остаётся актуальной&nbsp;— новые макеты сразу добавляются на&nbsp;карту</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+
+        <div class="shots one">
+        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70"></div><div class="row tall acc"></div><div class="row w45"></div></div></div></div></div><figcaption>Карта макетов в Figma</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="init rv">
+        <div class="init-top">
+        <div class="init-head">
+          <span class="init-n">03</span>
+          <h2>Версионирование</h2>
+          <p class="init-sub">Актуальные версии и&nbsp;вся история изменений</p>
+        </div>
+
+        <div class="init-body">
+          <div class="blk">
+            <div class="blk-l">Задача</div>
+            <p>В&nbsp;итерационной разработке макеты постоянно меняются&nbsp;— команде важно видеть актуальную версию, но&nbsp;при этом не&nbsp;терять важные наработки.</p>
+          </div>
+
+          <div class="blk blk-sol">
+            <div class="blk-l">Решение</div>
+            <p>Я&nbsp;внедрил систему версионирования: при начале работы над задачей создаётся новая версия макета на&nbsp;той&nbsp;же странице. В&nbsp;титульном блоке указывается версия&nbsp;— минорные правки меняют дробную часть, глобальные изменения увеличивают целую. Неактуальные версии перемещаются в&nbsp;архив.</p>
+          </div>
+
+          <div class="blk">
+            <div class="blk-l">Результат</div>
+            <ul class="res">
+              <li>Команда всегда работает с&nbsp;актуальными макетами</li>
+              <li>Сохраняется полная история дизайн-решений</li>
+              <li>Можно вернуться к&nbsp;ранним идеям при новых запросах бизнеса</li>
+              <li>Ни&nbsp;одна наработка не&nbsp;теряется</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+
+        <div class="shots two">
+        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row"></div><div class="row w45 acc"></div><div class="row tall"></div></div></div></div></div><figcaption>Титульный блок</figcaption></figure>
+        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row w30 acc"></div><div class="row tall"></div><div class="row w70"></div></div></div></div></div><figcaption>Страницы в файле</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="init rv">
+        <div class="init-top">
+        <div class="init-head">
+          <span class="init-n">04</span>
+          <h2>Дизайн-система</h2>
+          <p class="init-sub">Консистентность, скорость и&nbsp;порядок в&nbsp;каждом интерфейсе</p>
+        </div>
+
+        <div class="init-body">
+          <div class="blk">
+            <div class="blk-l">Задача</div>
+            <p>Создать единую дизайн-систему для развивающихся B2B-продуктов, которая устранила&nbsp;бы несогласованность интерфейсов и&nbsp;ускорила работу дизайнеров и&nbsp;разработчиков.</p>
+          </div>
+
+          <div class="blk blk-sol">
+            <div class="blk-l">Решение</div>
+            <p>Совместно с&nbsp;коллегами создали модульную дизайн-систему, которая итеративно развивается вместе с&nbsp;продуктами.</p>
+            <p><b>Для дизайнеров:</b> утвердили единые стандарты для цветов, шрифтов и&nbsp;базовых компонентов. Опубликовали в&nbsp;Figma библиотеку готовых и&nbsp;адаптивных компонентов.</p>
+            <p><b>Для разработчиков:</b> обеспечили полное соответствие дизайн-макетов и&nbsp;готовых компонентов в&nbsp;коде. Библиотека в&nbsp;React с&nbsp;подробной документацией позволила быстро и&nbsp;точно воплощать дизайн, сокращая время на&nbsp;согласование и&nbsp;правки.</p>
+          </div>
+
+          <div class="blk">
+            <div class="blk-l">Результат</div>
+            <ul class="res">
+              <li>Скорость работы дизайнеров и&nbsp;разработчиков выросла</li>
+              <li>Интерфейсы стали консистентными&nbsp;— с&nbsp;единым паттерном для пользователей</li>
+              <li>Новые фичи стали выпускаться быстрее</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+
+        <div class="shots three">
+        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row w30 acc"></div><div class="row tall"></div><div class="row w70"></div></div></div></div></div><figcaption>Статусы компонентов</figcaption></figure>
+        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70 acc"></div><div class="row"></div><div class="row tall"></div></div></div></div></div><figcaption>Компонент «Поле»</figcaption></figure>
+        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row tall"></div><div class="row w45"></div><div class="row w70 acc"></div></div></div></div></div><figcaption>Компонент «Кнопка»</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="init rv">
+        <div class="init-top">
+        <div class="init-head">
+          <span class="init-n">05</span>
+          <h2>Чек-лист макетов</h2>
+          <p class="init-sub">Проверяем макеты перед стартом разработки</p>
+        </div>
+
+        <div class="init-body">
+          <div class="blk">
+            <div class="blk-l">Задача</div>
+            <p>Отсутствие чётких стандартов качества в&nbsp;команде дизайнеров приводило к&nbsp;субъективной оценке макетов. Каждый специалист вносил правки, исходя из&nbsp;личного опыта, что порождало противоречивые решения и&nbsp;постоянные доработки. Это переносилось на&nbsp;этап разработки, замедляя вывод нового функционала.</p>
+          </div>
+
+          <div class="blk blk-sol">
+            <div class="blk-l">Решение</div>
+            <p>Совместно с&nbsp;командой создали единый чек-лист проверки макетов. Красным выделил критичные пункты, жёлтым&nbsp;— желательные, зелёным&nbsp;— необязательные.</p>
+          </div>
+
+          <div class="blk">
+            <div class="blk-l">Результат</div>
+            <ul class="res">
+              <li>Дизайнеры самостоятельно проверяют работы перед передачей</li>
+              <li>Сократилось количество правок и&nbsp;доработок</li>
+              <li>Разработчики получают готовые к&nbsp;реализации макеты</li>
+              <li>Команда уважает и&nbsp;экономит время каждого</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+
+        <div class="shots two">
+        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70 acc"></div><div class="row"></div><div class="row tall"></div></div></div></div></div><figcaption>Чек-лист: UX</figcaption></figure>
+        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row tall"></div><div class="row w45"></div><div class="row w70 acc"></div></div></div></div></div><figcaption>Чек-лист: UI и организация макетов</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="init rv">
+        <div class="init-top">
+        <div class="init-head">
+          <span class="init-n">06</span>
+          <h2>Дизайн-ревью</h2>
+          <p class="init-sub">Когда в&nbsp;ПРОМ видим то, что на&nbsp;макете</p>
+        </div>
+
+        <div class="init-body">
+          <div class="blk">
+            <div class="blk-l">Задача</div>
+            <p>Обеспечить точное соответствие реализованного функционала дизайн-макетам. Когда разработка не&nbsp;проверяется системно, накапливаются визуальные и&nbsp;функциональные расхождения, которые ухудшают пользовательский опыт и&nbsp;создают технический долг.</p>
+          </div>
+
+          <div class="blk blk-sol">
+            <div class="blk-l">Решение</div>
+            <p>Внедрили регулярное дизайн-ревью готовых задач. Для фиксации несоответствий создали в&nbsp;Confluence таблицу «Баги разработки» с&nbsp;колонками: описание ошибки, как должно быть, комментарий и&nbsp;статус исправления.</p>
+          </div>
+
+          <div class="blk">
+            <div class="blk-l">Результат</div>
+            <ul class="res">
+              <li>Разработчики получают конкретные и&nbsp;понятные замечания</li>
+              <li>Дизайнеры тратят меньше времени на&nbsp;описание ошибок</li>
+              <li>Сократилось количество итераций на&nbsp;правки</li>
+              <li>Выпускаемые продукты соответствуют требуемому качеству</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+
+        <div class="shots one">
+        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row tall"></div><div class="row w45"></div><div class="row w70 acc"></div></div></div></div></div><figcaption>Таблица дизайн-ревью в Confluence</figcaption></figure>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -523,7 +666,7 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 
       <div class="foot-in">
         <span>© 2026 Вячеслав Журин · Продуктовый дизайнер</span>
-        <span>Черновой макет · страница проектов v1</span>
+        <span>Черновой макет · страница лидерства v1</span>
       </div>
     </div>
   </section>
