@@ -239,6 +239,17 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
   .rv{transition:none!important}
 }
 </style>
+<script>
+(function(){
+  try{
+    var s = localStorage.getItem('ds-theme');
+    if (s !== 'dark' && s !== 'light'){
+      s = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', s);
+  }catch(e){}
+})();
+</script>
 </head>
 <body>
 
@@ -548,9 +559,15 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const root = document.documentElement;
 
-  setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  var saved = null;
+  try{ saved = localStorage.getItem('ds-theme'); }catch(e){}
+  if (saved !== 'dark' && saved !== 'light'){
+    saved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  setTheme(saved);
   function setTheme(t){
     root.setAttribute('data-theme', t);
+    try{ localStorage.setItem('ds-theme', t); }catch(e){}
     const tg = document.getElementById('themeToggle');
     if (tg) tg.setAttribute('aria-checked', t === 'dark');
   }
