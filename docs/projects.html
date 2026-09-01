@@ -223,11 +223,8 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 
 .pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:34px 30px;align-items:stretch}
 .pcard{grid-column:span 1;background:var(--surface);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;
-  transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+  box-shadow:var(--shadow-sm);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
 .pcard:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-/* DEMO: default-state shadow to unify shot+body into one card, per request — only on card 1 for now */
-.pcard-demo{box-shadow:var(--shadow-sm)}
-.pcard-demo:hover{box-shadow:var(--shadow)}
 .pcard.is-wide{grid-column:span 2}
 .pcard.is-wide .pc-body{max-width:64ch}
 
@@ -349,7 +346,7 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
       </div>
 
       <div class="pgrid">
-        <a class="pcard pcard-demo rv" href="case-project-1.html">
+        <a class="pcard rv" href="case-project-1.html">
           <div class="pc-shot pc-real" aria-hidden="true">
             <div class="shot-frame"><img src="images/previews/p1-cover.svg" alt="" loading="lazy"></div>
           </div>

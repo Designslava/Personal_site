@@ -222,7 +222,7 @@ h1.hero-title{font-size:clamp(2.35rem,5.7vw,4.9rem);max-width:21ch}
 /* ============ WORK ============ */
 .work-list{display:flex;flex-direction:column;gap:22px}
 .work-card{background:var(--surface);border-radius:var(--r-lg);overflow:hidden;display:grid;grid-template-columns:1fr 46%;align-items:stretch;
-  transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+  box-shadow:var(--shadow-sm);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
 .work-card:nth-child(even){grid-template-columns:46% 1fr}
 .work-card:nth-child(even) .wc-body{order:2}
 .work-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
