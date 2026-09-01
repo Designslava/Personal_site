@@ -4,3 +4,8 @@ desktop.ini
 node_modules/
 *.psd
 *.ai
+
+# Staging folder for screenshots being prepared — not part of the
+# published site (only docs/ is served). Files get copied into
+# docs/images/ once ready; this root copy stays untracked.
+/images/
