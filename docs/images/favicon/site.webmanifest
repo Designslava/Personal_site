@@ -1,0 +1,19 @@
+{
+  "name": "Слава Журин — продуктовый дизайнер",
+  "short_name": "Слава Журин",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#1F52F0",
+  "background_color": "#E5EAF1",
+  "display": "standalone"
+}
