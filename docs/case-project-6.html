@@ -117,6 +117,8 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 .shot{background:var(--shot-canvas);border-radius:var(--r-lg);display:flex;padding:22px;min-height:340px;filter:var(--shot-dim);transition:filter .4s ease}
 .shot:hover{filter:none}
 .shot-frame{flex:1;background:var(--shot-surface);border:1px solid var(--shot-line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 26px -10px rgba(16,32,80,0.28)}
+.shot-real .shot-frame{display:block}
+.shot-img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
 .shot-bar{height:28px;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid var(--shot-line);flex-shrink:0}
 .shot-bar i{width:7px;height:7px;border-radius:50%;background:var(--shot-skel);display:block}
 .shot-bar .addr{margin-left:8px;height:7px;flex:1;max-width:160px;border-radius:4px;background:var(--shot-skel)}
@@ -295,21 +297,8 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
       <p class="case-lead rv">У&nbsp;клиента редко один договор: к&nbsp;нему тянутся дополнительные соглашения и&nbsp;связанные документы. Специалисту нужно найти клиента, увидеть всю структуру целиком и&nbsp;внести правку, не&nbsp;сломав связи.</p>
 
       <div class="case-cover rv">
-        <div class="shot" aria-hidden="true">
-          <div class="shot-frame">
-            <div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div>
-            <div class="shot-body">
-              <div class="shot-side"><b></b><b></b><b></b><b></b><b></b></div>
-              <div class="shot-main">
-                <div class="row w45 acc"></div>
-                <div class="row tall"></div>
-                <div class="row"></div>
-                <div class="row w70"></div>
-                <div class="row w30"></div>
-                <div class="shot-cta"><span></span><span></span></div>
-              </div>
-            </div>
-          </div>
+        <div class="shot shot-real" aria-hidden="true">
+          <div class="shot-frame"><img class="shot-img" src="images/previews/p6-cover.svg" alt="" loading="lazy"></div>
         </div>
       </div>
       <p class="note rv">* Скриншот интерфейса живёт на&nbsp;постоянно светлой подложке — в&nbsp;тёмной теме она слегка притемняется и&nbsp;проясняется при наведении.</p>
@@ -356,19 +345,19 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 
       <div class="gallery">
         <div class="g-item g-full g-side rv">
-          <div class="shot r-wide"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70 acc"></div><div class="row"></div><div class="row w45"></div><div class="row tall"></div></div></div></div></div>
+          <div class="shot r-wide shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/06/p06-01-strategiya-poiska.svg" alt="" loading="lazy"></div></div>
           <p class="g-cap"><b>Стратегия поиска.</b> Пользователь выбирает, как искать, и&nbsp;уточняет результат фильтрами. Таблицу результатов настраивает под себя.</p>
         </div>
         <div class="g-item rv">
-          <div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row tall"></div><div class="row w45 acc"></div><div class="row w70"></div></div></div></div></div>
+          <div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/06/p06-02-oshibka-servisa.svg" alt="" loading="lazy"></div></div>
           <p class="g-cap"><b>Честная ошибка сервиса.</b> В&nbsp;карточку клиента интегрировано несколько микросервисов. Если один не&nbsp;отвечает&nbsp;— говорим, какой именно, а&nbsp;не&nbsp;показываем пустую карточку.</p>
         </div>
         <div class="g-item rv">
-          <div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row w45"></div><div class="row acc"></div><div class="row tall"></div></div></div></div></div>
+          <div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/06/p06-03-derevo-dogovorov.svg" alt="" loading="lazy"></div></div>
           <p class="g-cap"><b>Дерево договоров.</b> Связанные документы свёрнуты в&nbsp;стек и&nbsp;помечены иконкой, архивные по&nbsp;умолчанию скрыты. Клик раскрывает ветку.</p>
         </div>
         <div class="g-item g-full g-side g-flip rv">
-          <div class="shot r-wide"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70"></div><div class="row tall acc"></div><div class="row w45"></div></div></div></div></div>
+          <div class="shot r-wide shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/06/p06-04-redactirovanie.png" alt="" loading="lazy"></div></div>
           <p class="g-cap"><b>Правка по блокам.</b> Редактируется один блок, а&nbsp;не&nbsp;весь договор&nbsp;— внимание сфокусировано на&nbsp;изменении, вероятность ошибки ниже. Действия проходят в&nbsp;модальном окне, не&nbsp;уводя с&nbsp;договора.</p>
         </div>
       </div>
