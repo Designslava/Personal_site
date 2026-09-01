@@ -111,6 +111,8 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 .shot{background:var(--shot-canvas);border-radius:var(--r-lg);display:flex;padding:22px;min-height:340px;filter:var(--shot-dim);transition:filter .4s ease}
 .shot:hover{filter:none}
 .shot-frame{flex:1;background:var(--shot-surface);border:1px solid var(--shot-line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 26px -10px rgba(16,32,80,0.28)}
+.shot-real .shot-frame{display:block}
+.shot-img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
 .shot-bar{height:28px;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid var(--shot-line);flex-shrink:0}
 .shot-bar i{width:7px;height:7px;border-radius:50%;background:var(--shot-skel);display:block}
 .shot-bar .addr{margin-left:8px;height:7px;flex:1;max-width:160px;border-radius:4px;background:var(--shot-skel)}
@@ -364,19 +366,19 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 
       <div class="gallery">
         <div class="g-item g-full g-side rv">
-          <div class="shot r-wide"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70 acc"></div><div class="row"></div><div class="row w45"></div><div class="row tall"></div></div></div></div></div>
+          <div class="shot r-wide shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/02/p02-01-kartochka-uslugi.png" alt="" loading="lazy"></div></div>
           <p class="g-cap"><b>Карточка услуги в профиле.</b> Подключение живёт в&nbsp;разделе уведомлений&nbsp;— там&nbsp;же, где потом меняют настройки и&nbsp;отключают. Искать по&nbsp;другим разделам не&nbsp;нужно.</p>
         </div>
         <div class="g-item rv">
-          <div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row tall"></div><div class="row w45 acc"></div><div class="row w70"></div></div></div></div></div>
+          <div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/02/p02-02-landing.png" alt="" loading="lazy"></div></div>
           <p class="g-cap"><b>Лендинг об услуге.</b> Отдельный шаблон, который объясняет, от&nbsp;каких штрафов страхует подписка. Без него услуга выглядела строкой в&nbsp;настройках.</p>
         </div>
         <div class="g-item rv">
-          <div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row w45"></div><div class="row acc"></div><div class="row tall"></div></div></div></div></div>
+          <div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/02/p02-03-forma-podpisaniya.png" alt="" loading="lazy"></div></div>
           <p class="g-cap"><b>Форма перед подписанием.</b> Просмотровая форма показывает итоговые условия до&nbsp;подписи&nbsp;— клиент видит, за&nbsp;что платит.</p>
         </div>
         <div class="g-item g-full g-side g-flip rv">
-          <div class="shot r-wide"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70"></div><div class="row tall acc"></div><div class="row w45"></div></div></div></div></div>
+          <div class="shot r-wide shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/02/p02-04-podkluchenie-sotrudnikov.png" alt="" loading="lazy"></div></div>
           <p class="g-cap"><b>Подключение сотрудников.</b> Добавить можно только зарегистрированных и&nbsp;подтверждённых владельцем сотрудников&nbsp;— уведомления о&nbsp;сделках не&nbsp;уходят посторонним.</p>
         </div>
       </div>
