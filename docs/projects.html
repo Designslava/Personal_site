@@ -228,7 +228,7 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 .pcard.is-wide{grid-column:span 2}
 .pcard.is-wide .pc-body{max-width:64ch}
 
-.pc-shot{background:var(--shot-canvas);display:flex;padding:22px;aspect-ratio:16/10;filter:var(--shot-dim);transition:filter .4s ease}
+.pc-shot{background:var(--shot-canvas);display:flex;padding:22px;aspect-ratio:16/10;overflow:hidden;filter:var(--shot-dim);transition:filter .4s ease}
 .pcard:hover .pc-shot{filter:none}
 .pcard.is-wide .pc-shot{aspect-ratio:21/9}
 .pc-shot.r-square{aspect-ratio:1/1}
