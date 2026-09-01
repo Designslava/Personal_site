@@ -111,6 +111,8 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 .shot{background:var(--shot-canvas);border-radius:var(--r-lg);display:flex;padding:22px;min-height:340px;filter:var(--shot-dim);transition:filter .4s ease}
 .shot:hover{filter:none}
 .shot-frame{flex:1;background:var(--shot-surface);border:1px solid var(--shot-line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 26px -10px rgba(16,32,80,0.28)}
+.shot-real .shot-frame{display:block}
+.shot-img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
 .shot-bar{height:28px;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid var(--shot-line);flex-shrink:0}
 .shot-bar i{width:7px;height:7px;border-radius:50%;background:var(--shot-skel);display:block}
 .shot-bar .addr{margin-left:8px;height:7px;flex:1;max-width:160px;border-radius:4px;background:var(--shot-skel)}
@@ -367,20 +369,20 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 
       <div class="gallery">
         <div class="g-item g-full g-side rv">
-          <div class="shot r-wide"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70 acc"></div><div class="row"></div><div class="row w45"></div><div class="row tall"></div></div></div></div></div>
+          <div class="shot r-wide shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/05/p05-01-tema-podtema.webp" alt="" loading="lazy"></div></div>
           <p class="g-cap"><b>Тема и подтема.</b> Текст запроса собирается автоматически из&nbsp;выбранной комбинации. Шаблон открыт для правки&nbsp;— контролёр дописывает частный случай, а&nbsp;не&nbsp;пишет письмо с&nbsp;нуля.</p>
         </div>
         <div class="g-item rv">
-          <div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row tall"></div><div class="row w45 acc"></div><div class="row w70"></div></div></div></div></div>
+          <div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/05/p05-02-zaprosi-documenty.webp" alt="" loading="lazy"></div></div>
           <p class="g-cap"><b>Запросы и документы рядом.</b> Табы в&nbsp;одном окне, файлы сгруппированы по&nbsp;запросам. Непросмотренные помечены, и&nbsp;их&nbsp;аккордеон раскрыт по&nbsp;умолчанию.</p>
         </div>
         <div class="g-item rv">
-          <div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row w45"></div><div class="row acc"></div><div class="row tall"></div></div></div></div></div>
+          <div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/05/p05-03-prosmotr-faila.webp" alt="" loading="lazy"></div></div>
           <p class="g-cap"><b>Быстрый просмотр файла.</b> Документ открывается прямо в&nbsp;интерфейсе или на&nbsp;весь экран в&nbsp;новой вкладке&nbsp;— решение «принять / отказать» принимается сразу.</p>
         </div>
         <div class="g-item g-full g-side g-flip rv">
-          <div class="shot r-wide"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70"></div><div class="row tall acc"></div><div class="row w45"></div></div></div></div></div>
-          <p class="g-cap"><b>Введённое не теряется.</b> Составленный, но&nbsp;не&nbsp;отправленный запрос сохраняется: предупреждаем перед уходом из&nbsp;формы.</p>
+          <div class="shot r-wide shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/05/p05-04-prosmotr-zaprosa-otveta.webp" alt="" loading="lazy"></div></div>
+          <p class="g-cap"><b>Просмотр запроса и&nbsp;ответа.</b> Все запросы и&nbsp;ответы клиента по&nbsp;документу&nbsp;— в&nbsp;одном месте, без&nbsp;переключения между письмами.</p>
         </div>
       </div>
     </div>
