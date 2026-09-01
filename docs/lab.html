@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Рабочее место валютного контролёра — Слава Журин</title>
+<title>Лаборатория — Слава Журин</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -163,13 +163,6 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 .result-text b{color:var(--on-dark);font-weight:600}
 
 /* ============ OTHER PROJECTS SWITCHER ============ */
-/* ============ RESEARCH / HYPOTHESIS ============ */
-.res-methods{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:36px}
-.res-methods span{font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:.06em;padding:9px 15px;border-radius:var(--r-pill);border:1px dashed var(--hairline);color:var(--ink-2)}
-.hypo{padding-left:26px;border-left:2px solid var(--accent);max-width:56ch}
-.hypo .k{font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
-.hypo p{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 106,'wght' 620;font-size:clamp(1.15rem,2.2vw,1.62rem);letter-spacing:-0.026em;line-height:1.3}
-
 /* ============ ALL PROJECTS — аккордеон ============ */
 .head-rule{padding-bottom:22px;border-bottom:1px solid var(--hairline);margin-bottom:34px}
 .head-rule .label{margin-bottom:0}
@@ -211,6 +204,155 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 .rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .rv.in{opacity:1;transform:none}
 
+
+/* ============ ВИТРИНА ПРОЕКТОВ ============ */
+.pg-hero{padding-top:calc(var(--sec-y) + 56px);padding-bottom:calc(var(--sec-y) * 0.5)}
+.pg-hero h1{font-size:clamp(2.4rem,6vw,4.6rem);max-width:16ch}
+.pg-lead{margin-top:26px;max-width:58ch;color:var(--ink-2);font-size:1.06rem}
+
+.group-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  padding-bottom:22px;margin-bottom:38px;border-bottom:1px solid var(--hairline)}
+.group-head .label{margin-bottom:0}
+.group-head .count{font-family:'JetBrains Mono',monospace;font-size:0.71rem;letter-spacing:.16em;color:var(--ink-3)}
+
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:34px 30px;align-items:stretch}
+.pcard{grid-column:span 1;background:var(--surface);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.pcard:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.pcard.is-wide{grid-column:span 2}
+.pcard.is-wide .pc-body{max-width:64ch}
+
+.pc-shot{background:var(--shot-canvas);display:flex;padding:22px;aspect-ratio:16/10;filter:var(--shot-dim);transition:filter .4s ease}
+.pcard:hover .pc-shot{filter:none}
+.pcard.is-wide .pc-shot{aspect-ratio:21/9}
+.pc-shot.r-square{aspect-ratio:1/1}
+.pc-shot.r-tall{aspect-ratio:4/5}
+.pc-shot.r-pano{aspect-ratio:2/1}
+.pc-shot.is-plain{padding:0}
+.pc-shot.is-plain .shot-frame{border-radius:0;border:none;box-shadow:none}
+.pc-shot img{width:100%;height:100%;object-fit:cover}
+
+.pc-body{padding:30px 32px 34px;display:flex;flex-direction:column;flex:1}
+.pc-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.pc-num{font-family:'JetBrains Mono',monospace;font-size:0.71rem;letter-spacing:.12em;color:var(--ink-3);margin-right:2px}
+.pcard h3{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 110,'wght' 720;font-size:clamp(1.25rem,2.1vw,1.6rem);
+  letter-spacing:-0.03em;line-height:1.14;max-width:24ch}
+.pc-desc{margin-top:12px;color:var(--ink-2);font-size:0.96rem;max-width:48ch}
+.pc-link{display:inline-flex;align-items:center;gap:9px;margin-top:auto;padding-top:24px;font-size:0.93rem;font-weight:600;color:var(--ink)}
+.pc-link svg{transition:transform .4s var(--ease)}
+.pcard:hover .pc-link svg{transform:translateX(5px)}
+.pcard.is-external .pc-link svg{transition:transform .4s var(--ease)}
+.pcard.is-external:hover .pc-link svg{transform:translate(3px,-3px)}
+
+.outlink{margin-top:var(--group-gap);display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;
+  padding:34px 36px;border-radius:var(--r-lg);border:1px dashed var(--hairline);background:var(--ghost)}
+.outlink h3{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 108,'wght' 720;font-size:1.3rem;letter-spacing:-0.025em;margin-bottom:8px}
+.outlink p{color:var(--ink-2);font-size:0.96rem;max-width:52ch}
+
+
+/* ============ ЛИДЕРСТВО ============ */
+:root{--shot-pad:18px}
+.ld-hero{padding-top:calc(var(--sec-y) + 56px);padding-bottom:calc(var(--sec-y) * 0.5)}
+.ld-hero h1{font-size:clamp(2.3rem,5.2vw,4.1rem);max-width:19ch}
+.ld-lead{margin-top:28px;max-width:60ch;color:var(--ink-2);font-size:1.06rem}
+
+/* три факта строкой, без карточек */
+.facts{display:grid;grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}
+.fact{padding:32px 34px 32px 0;border-right:1px solid var(--hairline)}
+.fact:last-child{border-right:none}
+.fact:not(:first-child){padding-left:34px}
+.fact .ft{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 108,'wght' 720;
+  font-size:1.1rem;letter-spacing:-0.02em;margin-bottom:9px}
+.fact p{color:var(--ink-2);font-size:0.94rem}
+
+/* инициативы — редакционный разворот, без боксов */
+.init{padding:66px 0;border-bottom:1px solid var(--hairline)}
+.init:first-child{border-top:1px solid var(--hairline)}
+.init-top{display:grid;grid-template-columns:.82fr 1.18fr;gap:58px;align-items:start}
+.init-head{position:sticky;top:104px}
+.init-n{display:block;font-family:'JetBrains Mono',monospace;font-size:0.71rem;
+  letter-spacing:.16em;color:var(--ink-3);margin-bottom:14px}
+.init-head h2{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 112,'wght' 780;
+  font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-0.04em;line-height:1.06;max-width:14ch}
+.init-sub{margin-top:16px;color:var(--accent);font-size:0.97rem;font-weight:500;max-width:30ch}
+
+.blk + .blk{margin-top:30px}
+.blk-l{font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:11px}
+.blk p{color:var(--ink-2);font-size:1.01rem;max-width:56ch}
+.blk p + p{margin-top:13px}
+.blk p b{color:var(--ink);font-weight:600}
+.blk-sol{padding:26px 28px;border-radius:var(--r-md);background:var(--ghost);
+  border-left:3px solid var(--accent)}
+.blk-sol .blk-l{margin-bottom:12px}
+
+.res{list-style:none;display:flex;flex-direction:column;gap:11px}
+.res li{position:relative;padding-left:24px;color:var(--ink-2);font-size:1.01rem;max-width:56ch}
+.res li::before{content:"";position:absolute;left:0;top:10px;width:11px;height:2px;
+  border-radius:2px;background:var(--accent)}
+
+/* полоса скриншотов под инициативой */
+.shots{margin-top:48px;display:grid;gap:48px 44px}
+.shots.two{grid-template-columns:repeat(2,1fr)}
+.shots.three{grid-template-columns:repeat(3,1fr)}
+.fig .shot{min-height:0;aspect-ratio:16/10;padding:var(--shot-pad)}
+.shots.one .fig .shot{aspect-ratio:2/1}
+.fig figcaption{margin-top:13px;padding-left:var(--shot-pad);
+  font-family:'JetBrains Mono',monospace;font-size:0.68rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+
+
+/* ============ ЛАБОРАТОРИЯ ============ */
+.lab-hero{padding-top:calc(var(--sec-y) + 56px);padding-bottom:calc(var(--sec-y) * 0.5)}
+.lab-hero h1{font-size:clamp(2.3rem,5.2vw,4.1rem);max-width:15ch}
+.lab-lead{margin-top:28px;max-width:58ch;color:var(--ink-2);font-size:1.06rem}
+.lab-note{margin-top:22px;display:inline-flex;align-items:center;gap:10px;
+  padding:11px 18px;border-radius:var(--r-pill);border:1px dashed var(--hairline);
+  font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:.08em;color:var(--ink-3)}
+
+/* журнал: плотные строки вместо карточек */
+.log{border-top:1px solid var(--hairline)}
+.log-h{display:grid;grid-template-columns:64px 1fr 190px 132px;gap:26px;align-items:center;
+  padding:14px 0;border-bottom:1px solid var(--hairline);
+  font-family:'JetBrains Mono',monospace;font-size:0.66rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-3)}
+.entry{display:grid;grid-template-columns:64px 1fr 190px 132px;gap:26px;align-items:center;
+  padding:26px 0;border-bottom:1px solid var(--hairline);position:relative;
+  transition:background .3s var(--ease)}
+.entry::before{content:"";position:absolute;left:-20px;top:0;bottom:0;width:2px;
+  background:var(--accent);opacity:0;transition:opacity .3s var(--ease)}
+.entry:hover::before{opacity:1}
+.e-n{font-family:'JetBrains Mono',monospace;font-size:0.74rem;color:var(--ink-3);align-self:start;padding-top:4px}
+.e-main h3{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 108,'wght' 720;
+  font-size:1.2rem;letter-spacing:-0.025em;line-height:1.2;margin-bottom:8px}
+.e-main p{color:var(--ink-2);font-size:0.95rem;max-width:54ch}
+.e-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}
+.e-stack{display:flex;flex-direction:column;gap:5px;font-family:'JetBrains Mono',monospace;
+  font-size:0.72rem;color:var(--ink-3);align-self:start;padding-top:4px}
+.e-date{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--ink-3)}
+
+.st{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:var(--r-pill);
+  font-family:'JetBrains Mono',monospace;font-size:0.66rem;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--hairline);color:var(--ink-2);justify-self:start;align-self:start;white-space:nowrap}
+.st i{width:6px;height:6px;border-radius:50%;background:var(--ink-3);flex:none}
+.st.go{border-color:transparent;background:var(--ghost);color:var(--ink)}
+.st.go i{background:var(--accent)}
+.st.done i{background:var(--ink-2)}
+.st.ice{opacity:.66}
+
+/* витрина внизу: три плитки разной высоты */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:var(--group-gap);align-items:start}
+.tile{background:var(--shot-canvas);border-radius:var(--r-lg);padding:26px;
+  display:flex;flex-direction:column;justify-content:flex-end;min-height:210px;
+  filter:var(--shot-dim);transition:filter .4s ease,transform .4s var(--ease)}
+.tile:hover{filter:none;transform:translateY(-4px)}
+.tile.t-tall{min-height:320px}
+.tile .tn{font-family:'JetBrains Mono',monospace;font-size:0.66rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+.tile .tt{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 108,'wght' 700;
+  font-size:1.02rem;letter-spacing:-0.02em;color:var(--ink)}
+
 /* ============ RESPONSIVE ============ */
 @media (max-width:1040px){
   :root{--sec-y:92px;--head-gap:40px;--group-gap:44px;--foot-gap:56px}
@@ -223,6 +365,27 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
   .g-item.g-side .shot,.g-item.g-side.g-flip .shot{order:0}
   .g-item .shot,.g-item .shot.r-pano,.g-item .shot.r-tall,.g-item .shot.r-square{aspect-ratio:16/10}
   .result-wrap{grid-template-columns:1fr;gap:28px}
+  .pgrid{grid-template-columns:1fr;gap:26px}
+  .pcard.is-wide{grid-column:auto}
+  .pcard.is-wide .pc-shot{aspect-ratio:16/10}
+  .pc-shot.r-square,.pc-shot.r-tall,.pc-shot.r-pano{aspect-ratio:16/10}
+  .outlink{flex-direction:column;align-items:flex-start;gap:20px}
+  .facts{grid-template-columns:1fr;border-bottom:none}
+  .fact{padding:24px 0;border-right:none;border-bottom:1px solid var(--hairline)}
+  .fact:not(:first-child){padding-left:0}
+  .init{padding:44px 0}
+  .init-top{grid-template-columns:1fr;gap:26px}
+  .init-head{position:static}
+  .shots{margin-top:30px}
+  .shots,.shots.two,.shots.three{grid-template-columns:1fr;gap:34px}
+  .fig .shot,.shots.one .fig .shot{aspect-ratio:16/10}
+  .log-h{display:none}
+  .entry{grid-template-columns:1fr;gap:14px;padding:30px 0}
+  .entry::before{left:-14px}
+  .e-n{padding-top:0}
+  .e-stack{flex-direction:row;flex-wrap:wrap;gap:12px;padding-top:0}
+  .tiles{grid-template-columns:1fr;gap:20px}
+  .tile,.tile.t-tall{min-height:180px}
   .contact-actions{grid-template-columns:1fr}
   .acc-trig,.acc-inner{grid-template-columns:32px 1fr;gap:12px}
 }
@@ -257,9 +420,9 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
   <div class="bar">
     <a class="brand" href="index.html#top"><span class="spark">✦</span>Слава Журин</a>
     <nav class="nav">
-      <a class="is-active" href="projects.html">Проекты</a>
+      <a href="projects.html">Проекты</a>
       <a href="leadership.html">Лидерство</a>
-      <a href="lab.html">Лаборатория</a>
+      <a class="is-active" href="lab.html">Лаборатория</a>
       <a href="index.html#about">О&nbsp;себе</a>
     </nav>
     <div class="hgroup">
@@ -273,249 +436,112 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a class="is-active" href="projects.html">Проекты</a><a href="leadership.html">Лидерство</a><a href="lab.html">Лаборатория</a><a href="index.html#about">О&nbsp;себе</a><a href="#contact">Контакты</a>
+    <a href="projects.html">Проекты</a><a href="leadership.html">Лидерство</a><a class="is-active" href="lab.html">Лаборатория</a><a href="index.html#about">О&nbsp;себе</a><a href="#contact">Контакты</a>
   </div>
 </header>
 
 <div id="top">
 
-  <!-- CASE HERO -->
-  <section class="case-hero">
+  <section class="lab-hero">
     <div class="container">
-      <div class="case-meta rv">
-        <span class="chip">B2E</span>
-        <span class="chip">Внутренний инструмент</span>
-      </div>
-      <h1 class="display case-hero-title rv">Рабочее место валютного контролёра</h1>
-      <p class="case-lead rv">Более 2500&nbsp;задач в&nbsp;день на&nbsp;отдел. Руководителю нужно раздать их&nbsp;так, чтобы ничего не&nbsp;просрочить, а&nbsp;контролёру&nbsp;— выполнить задачу, не&nbsp;собирая данные по&nbsp;соседним системам. Собрал список, карточку задачи, связанные задачи и&nbsp;карточку клиента в&nbsp;одно рабочее место.</p>
-
-      <div class="case-cover rv">
-        <div class="shot" aria-hidden="true">
-          <div class="shot-frame">
-            <div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div>
-            <div class="shot-body">
-              <div class="shot-side"><b></b><b></b><b></b><b></b><b></b></div>
-              <div class="shot-main">
-                <div class="row w45 acc"></div>
-                <div class="row tall"></div>
-                <div class="row"></div>
-                <div class="row w70"></div>
-                <div class="row w30"></div>
-                <div class="shot-cta"><span></span><span></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p class="note rv">* Скриншот интерфейса живёт на&nbsp;постоянно светлой подложке — в&nbsp;тёмной теме она слегка притемняется и&nbsp;проясняется при наведении.</p>
+      <div class="label">Лаборатория</div>
+      <h1 class="display">Пробую руками то, о&nbsp;чём пока не&nbsp;пишут в&nbsp;статьях</h1>
+      <p class="lab-lead">Здесь лежат опыты, а&nbsp;не&nbsp;кейсы. Что-то дошло до&nbsp;рабочего прототипа, что-то заброшено на&nbsp;половине&nbsp;— и&nbsp;это тоже результат. Показываю как&nbsp;есть, вместе с&nbsp;тупиками.</p>
+      <div class="lab-note">Черновик · содержимое условное</div>
     </div>
   </section>
 
-  <!-- REQUIREMENTS / SOLUTIONS -->
-  <section id="brief">
+  <section>
     <div class="container">
-      <div class="case-cols">
-        <div class="case-col rv">
-          <h3>Бизнес-требования</h3>
-          <ul>
-            <li>Видеть весь список задач и&nbsp;статус выполнения каждой</li>
-            <li>Получать детальную информацию по&nbsp;задаче и&nbsp;видеть связанные задачи</li>
-            <li>Отслеживать просроченные задачи</li>
-            <li>Проводить единичные и&nbsp;массовые операции над задачами</li>
-            <li>Знать особенности обслуживания клиента</li>
-            <li>Переводить задачу на&nbsp;менеджера и&nbsp;видеть статус исполнения</li>
-            <li>Настраивать интерфейс под себя</li>
-          </ul>
-        </div>
-        <div class="case-col rv">
-          <h3>Решения</h3>
-          <ul>
-            <li>Просроченные задачи выделяем в&nbsp;списке, поднимаем наверх и&nbsp;показываем срок просрочки</li>
-            <li>Вся информация для выполнения задачи&nbsp;— в&nbsp;одном окне</li>
-            <li>Карточка клиента открывается из&nbsp;задачи: видно особенности обслуживания</li>
-            <li>Связанные задачи открываются лайтбоксом&nbsp;— их&nbsp;проще назначить пачкой</li>
-            <li>Фильтрация по&nbsp;любому элементу интерфейса и&nbsp;персональная настройка набора фильтров</li>
-            <li>Настройка таблицы: пользователь оставляет нужные колонки</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INSIGHT GALLERY -->
-  <section id="insights">
-    <div class="container">
-      <div class="sec-head rv">
-        <div>
-          <div class="label">Детали</div>
-          <h2>Что учли в&nbsp;интерфейсе</h2>
-        </div>
-        <p class="desc">Всё, что раньше требовало переключения между системами и&nbsp;уточняющих звонков, собрано в&nbsp;одном экране.</p>
+      <div class="group-head rv">
+        <div class="label">Журнал опытов</div>
+        <span class="count">01—06</span>
       </div>
 
-      <div class="gallery">
-        <div class="g-item g-full g-side rv">
-          <div class="shot r-wide"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70 acc"></div><div class="row"></div><div class="row w45"></div><div class="row tall"></div></div></div></div></div>
-          <p class="g-cap"><b>Детальная информация по задаче.</b> Открывается из&nbsp;списка и&nbsp;содержит всё нужное для решения&nbsp;— контролёр не&nbsp;ищет данные в&nbsp;других сервисах.</p>
+      <div class="log">
+        <div class="log-h">
+          <span>№</span>
+          <span>Опыт</span>
+          <span>Инструменты</span>
+          <span>Статус</span>
         </div>
-        <div class="g-item rv">
-          <div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row tall"></div><div class="row w45 acc"></div><div class="row w70"></div></div></div></div></div>
-          <p class="g-cap"><b>Карточка клиента.</b> Открывается прямо из&nbsp;окна задачи: видны особенности обслуживания, статус подсвечен в&nbsp;тултипе. Можно предложить индивидуальные условия.</p>
+
+        <div class="entry rv">
+          <div class="e-n">01</div>
+          <div class="e-main">
+            <h3>Условное название эксперимента</h3>
+            <p>Здесь будет описание: что проверял, что получилось, чем закончилось. Пара предложений без прикрас.</p>
+            <div class="e-tags"><span class="chip">Прототип</span><span class="chip">AI</span></div>
+          </div>
+          <div class="e-stack"><span>Claude Code</span><span>React</span><span class="e-date">Ноябрь 2025</span></div>
+          <span class="st go"><i></i>В работе</span>
         </div>
-        <div class="g-item rv">
-          <div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row w45"></div><div class="row acc"></div><div class="row tall"></div></div></div></div></div>
-          <p class="g-cap"><b>Связанные задачи.</b> По&nbsp;клику открывается лайтбокс со&nbsp;связанными задачами&nbsp;— назначить их&nbsp;разом быстрее, чем искать поодиночке.</p>
+
+        <div class="entry rv">
+          <div class="e-n">02</div>
+          <div class="e-main">
+            <h3>Условное название эксперимента</h3>
+            <p>Здесь будет описание: что проверял, что получилось, чем закончилось. Пара предложений без прикрас.</p>
+            <div class="e-tags"><span class="chip">Интерфейс</span></div>
+          </div>
+          <div class="e-stack"><span>Figma Make</span><span class="e-date">Октябрь 2025</span></div>
+          <span class="st done"><i></i>Готово</span>
         </div>
-        <div class="g-item g-full g-side g-flip rv">
-          <div class="shot r-wide"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70"></div><div class="row tall acc"></div><div class="row w45"></div></div></div></div></div>
-          <p class="g-cap"><b>Просроченное&nbsp;— наверх.</b> Такие задачи выделены в&nbsp;списке и&nbsp;подписаны сроком просрочки. Руководитель видит проблему до&nbsp;того, как о&nbsp;ней спросят.</p>
+
+        <div class="entry rv">
+          <div class="e-n">03</div>
+          <div class="e-main">
+            <h3>Условное название эксперимента</h3>
+            <p>Здесь будет описание: что проверял, что получилось, чем закончилось. Пара предложений без прикрас.</p>
+            <div class="e-tags"><span class="chip">Генерация</span><span class="chip">UI</span></div>
+          </div>
+          <div class="e-stack"><span>Gemini</span><span>HTML</span><span class="e-date">Сентябрь 2025</span></div>
+          <span class="st done"><i></i>Готово</span>
+        </div>
+
+        <div class="entry rv">
+          <div class="e-n">04</div>
+          <div class="e-main">
+            <h3>Условное название эксперимента</h3>
+            <p>Здесь будет описание: что проверял, что получилось, чем закончилось. Пара предложений без прикрас.</p>
+            <div class="e-tags"><span class="chip">Данные</span></div>
+          </div>
+          <div class="e-stack"><span>Python</span><span class="e-date">Июль 2025</span></div>
+          <span class="st ice"><i></i>Заморожено</span>
+        </div>
+
+        <div class="entry rv">
+          <div class="e-n">05</div>
+          <div class="e-main">
+            <h3>Условное название эксперимента</h3>
+            <p>Здесь будет описание: что проверял, что получилось, чем закончилось. Пара предложений без прикрас.</p>
+            <div class="e-tags"><span class="chip">Прототип</span></div>
+          </div>
+          <div class="e-stack"><span>Claude Code</span><span class="e-date">Май 2025</span></div>
+          <span class="st done"><i></i>Готово</span>
+        </div>
+
+        <div class="entry rv">
+          <div class="e-n">06</div>
+          <div class="e-main">
+            <h3>Условное название эксперимента</h3>
+            <p>Здесь будет описание: что проверял, что получилось, чем закончилось. Пара предложений без прикрас.</p>
+            <div class="e-tags"><span class="chip">Исследование</span><span class="chip">AI</span></div>
+          </div>
+          <div class="e-stack"><span>Figma</span><span>Miro</span><span class="e-date">Март 2025</span></div>
+          <span class="st ice"><i></i>Заморожено</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- RESULT -->
-  <section id="result" class="bleed-dark">
-    <div class="container">
-      <div class="result-wrap rv">
-        <div class="result-num">Выведено<br><span>в промышленную эксплуатацию</span></div>
-        <p class="result-text">Рабочее место используется отделом ежедневно на&nbsp;потоке <b>более 2500&nbsp;задач в&nbsp;день</b>. Руководитель распределяет задачи и&nbsp;видит статус исполнения, контролёр решает задачу в&nbsp;одном окне.</p>
+      <div class="group-head rv" style="margin-top:var(--group-gap)">
+        <div class="label">Визуальные пробы</div>
+        <span class="count">01—03</span>
       </div>
-    </div>
-  </section>
 
-  <!-- ALL PROJECTS -->
-  <section id="projects">
-    <div class="container">
-      <div class="head-rule rv"><div class="label">Все проекты · 01—08</div></div>
-      <div class="acc" id="projAcc">
-        <div class="acc-item rv">
-          <button class="acc-trig" type="button" aria-expanded="false" aria-controls="ap-01" id="at-01">
-            <span class="n">01</span>
-            <span class="t">Переписка для&nbsp;целей валютного контроля</span>
-          </button>
-          <div class="acc-panel" id="ap-01" role="region" aria-labelledby="at-01">
-            <div class="acc-inner">
-              <div></div>
-              <div class="acc-body">
-                <p>Сценарии передачи документов в&nbsp;банк: написать письмо, получить ответ, посмотреть переписку по&nbsp;конкретному документу. Расширенный поиск, статусы писем, роли составителя и&nbsp;подписанта.</p>
-                <div class="acc-tags"><span class="chip">B2B</span><span class="chip">Валютный контроль</span></div>
-                <a class="acc-open" href="case-project-1.html">Смотреть кейс <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="acc-item rv">
-          <button class="acc-trig" type="button" aria-expanded="false" aria-controls="ap-02" id="at-02">
-            <span class="n">02</span>
-            <span class="t">Подключение уведомлений валютного контроля</span>
-          </button>
-          <div class="acc-panel" id="ap-02" role="region" aria-labelledby="at-02">
-            <div class="acc-inner">
-              <div></div>
-              <div class="acc-body">
-                <p>Услуга, которая заранее предупреждает клиента о&nbsp;сроках и&nbsp;возможных нарушениях валютного законодательства: карточка услуги в&nbsp;профиле, СМС и&nbsp;почта, подключение ответственных сотрудников.</p>
-                <div class="acc-tags"><span class="chip">B2B</span><span class="chip">Уведомления</span></div>
-                <a class="acc-open" href="case-project-2.html">Смотреть кейс <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="acc-item is-open rv">
-          <button class="acc-trig" type="button" aria-expanded="true" aria-controls="ap-03" id="at-03">
-            <span class="n">03</span>
-            <span class="t">Рабочее место валютного контролёра</span>
-          </button>
-          <div class="acc-panel" id="ap-03" role="region" aria-labelledby="at-03">
-            <div class="acc-inner">
-              <div></div>
-              <div class="acc-body">
-                <p>Список задач, детальная информация, связанные задачи и&nbsp;карточка клиента в&nbsp;одном окне. Руководитель распределяет поток более 2500&nbsp;задач в&nbsp;день.</p>
-                <div class="acc-tags"><span class="chip">B2E</span><span class="chip">Внутренний инструмент</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="acc-item rv">
-          <button class="acc-trig" type="button" aria-expanded="false" aria-controls="ap-04" id="at-04">
-            <span class="n">04</span>
-            <span class="t">Фильтры</span>
-          </button>
-          <div class="acc-panel" id="ap-04" role="region" aria-labelledby="at-04">
-            <div class="acc-inner">
-              <div></div>
-              <div class="acc-body">
-                <p>Фильтрация по&nbsp;любому элементу интерфейса, персональная настройка набора фильтров перетаскиванием, быстрый отбор только просроченных задач и&nbsp;сброс всего одним действием.</p>
-                <div class="acc-tags"><span class="chip">B2E</span><span class="chip">Паттерн интерфейса</span></div>
-                <a class="acc-open" href="case-project-4.html">Смотреть кейс <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="acc-item rv">
-          <button class="acc-trig" type="button" aria-expanded="false" aria-controls="ap-05" id="at-05">
-            <span class="n">05</span>
-            <span class="t">Запросы валютного контроля</span>
-          </button>
-          <div class="acc-panel" id="ap-05" role="region" aria-labelledby="at-05">
-            <div class="acc-inner">
-              <div></div>
-              <div class="acc-body">
-                <p>Темы и&nbsp;подтемы запроса с&nbsp;готовым шаблоном письма, все запросы и&nbsp;ответы клиента по&nbsp;документу в&nbsp;одном месте, быстрый просмотр присланных файлов. Гемба, метод мокасин, интервью.</p>
-                <div class="acc-tags"><span class="chip">B2E</span><span class="chip">Внутренний инструмент</span></div>
-                <a class="acc-open" href="case-project-5.html">Смотреть кейс <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="acc-item rv">
-          <button class="acc-trig" type="button" aria-expanded="false" aria-controls="ap-06" id="at-06">
-            <span class="n">06</span>
-            <span class="t">Договоры клиентов</span>
-          </button>
-          <div class="acc-panel" id="ap-06" role="region" aria-labelledby="at-06">
-            <div class="acc-inner">
-              <div></div>
-              <div class="acc-body">
-                <p>Поиск клиента по&nbsp;нескольким стратегиям, карточка клиента и&nbsp;древовидная структура договоров со&nbsp;связанными соглашениями. Единая форма просмотра и&nbsp;редактирования по&nbsp;блокам.</p>
-                <div class="acc-tags"><span class="chip">B2E</span><span class="chip">Договоры</span></div>
-                <a class="acc-open" href="case-project-6.html">Смотреть кейс <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="acc-item rv">
-          <button class="acc-trig" type="button" aria-expanded="false" aria-controls="ap-07" id="at-07">
-            <span class="n">07</span>
-            <span class="t">Платёжные инструкции</span>
-          </button>
-          <div class="acc-panel" id="ap-07" role="region" aria-labelledby="at-07">
-            <div class="acc-inner">
-              <div></div>
-              <div class="acc-body">
-                <p>Всё для выполнения задачи&nbsp;— внутри задачи: интегрированный поиск агента с&nbsp;автозаполнением полей, динамическая валидация по&nbsp;всем формам, подсказки для новых сотрудников.</p>
-                <div class="acc-tags"><span class="chip">B2E</span><span class="chip">Платежи</span></div>
-                <a class="acc-open" href="case-project-7.html">Смотреть кейс <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="acc-item rv">
-          <button class="acc-trig" type="button" aria-expanded="false" aria-controls="ap-08" id="at-08">
-            <span class="n">08</span>
-            <span class="t">Пошаговая форма обработки</span>
-          </button>
-          <div class="acc-panel" id="ap-08" role="region" aria-labelledby="at-08">
-            <div class="acc-inner">
-              <div></div>
-              <div class="acc-body">
-                <p>Переработка перегруженной формы в&nbsp;пошаговую: на&nbsp;экране только текущий шаг, валидация на&nbsp;переходе, итоговый документ на&nbsp;последнем шаге.</p>
-                <div class="acc-tags"><span class="chip">B2E</span><span class="chip">Паттерн интерфейса</span></div>
-                <a class="acc-open" href="case-project-8.html">Смотреть кейс <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="tiles">
+        <div class="tile  rv"><div class="tn">01</div><div class="tt">Условная визуальная работа</div></div>
+        <div class="tile t-tall rv"><div class="tn">02</div><div class="tt">Условная визуальная работа</div></div>
+        <div class="tile  rv"><div class="tn">03</div><div class="tt">Условная визуальная работа</div></div>
       </div>
     </div>
   </section>
@@ -548,7 +574,7 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 
       <div class="foot-in">
         <span>© 2026 Вячеслав Журин · Продуктовый дизайнер</span>
-        <span>Черновой макет · кейс 03 · шаблон страницы кейса v1</span>
+        <span>Черновой макет · страница лаборатории v1 · содержимое условное</span>
       </div>
     </div>
   </section>
@@ -590,31 +616,6 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.rv').forEach(el => io.observe(el));
 
-  /* --- аккордеон проектов: single + collapsible --- */
-  const acc = document.getElementById('projAcc');
-  if (acc){
-    const items = Array.from(acc.querySelectorAll('.acc-item'));
-    const panelOf = it => it.querySelector('.acc-panel');
-    const setH = (it, open) => {
-      const p = panelOf(it);
-      p.style.height = open ? p.querySelector('.acc-inner').offsetHeight + 'px' : '0px';
-    };
-    items.forEach(it => setH(it, it.classList.contains('is-open')));
-    items.forEach(it => {
-      it.querySelector('.acc-trig').addEventListener('click', () => {
-        const willOpen = !it.classList.contains('is-open');
-        items.forEach(o => {
-          const open = (o === it) && willOpen;
-          o.classList.toggle('is-open', open);
-          o.querySelector('.acc-trig').setAttribute('aria-expanded', open);
-          setH(o, open);
-        });
-      });
-    });
-    window.addEventListener('resize', () => {
-      items.forEach(it => setH(it, it.classList.contains('is-open')));
-    });
-  }
 })();
 </script>
 </body>
