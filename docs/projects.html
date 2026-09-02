@@ -222,6 +222,7 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 .group-head .count{font-family:'JetBrains Mono',monospace;font-size:0.71rem;letter-spacing:.16em;color:var(--ink-3)}
 
 .pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:34px 30px;align-items:stretch}
+.pgrid.three{grid-template-columns:repeat(3,1fr)}
 .pcard{grid-column:span 1;background:var(--surface);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;
   box-shadow:var(--shadow-sm);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
 .pcard:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
@@ -251,10 +252,9 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 .pcard.is-external .pc-link svg{transition:transform .4s var(--ease)}
 .pcard.is-external:hover .pc-link svg{transform:translate(3px,-3px)}
 
-.outlink{margin-top:var(--group-gap);display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;
-  padding:34px 36px;border-radius:var(--r-lg);border:1px dashed var(--hairline);background:var(--ghost)}
+.outlink{margin-top:var(--group-gap)}
 .outlink h3{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 108,'wght' 720;font-size:1.3rem;letter-spacing:-0.025em;margin-bottom:8px}
-.outlink p{color:var(--ink-2);font-size:0.96rem;max-width:52ch}
+.outlink p{color:var(--ink-2);font-size:0.96rem;max-width:64ch}
 
 /* ============ RESPONSIVE ============ */
 @media (max-width:1040px){
@@ -268,11 +268,10 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
   .g-item.g-side .shot,.g-item.g-side.g-flip .shot{order:0}
   .g-item .shot,.g-item .shot.r-pano,.g-item .shot.r-tall,.g-item .shot.r-square{aspect-ratio:16/10}
   .result-wrap{grid-template-columns:1fr;gap:28px}
-  .pgrid{grid-template-columns:1fr;gap:26px}
+  .pgrid,.pgrid.three{grid-template-columns:1fr;gap:26px}
   .pcard.is-wide{grid-column:auto}
   .pcard.is-wide .pc-shot{aspect-ratio:16/10}
   .pc-shot.r-square,.pc-shot.r-tall,.pc-shot.r-pano{aspect-ratio:16/10}
-  .outlink{flex-direction:column;align-items:flex-start;gap:20px}
   .contact-actions{grid-template-columns:1fr}
   .acc-trig,.acc-inner{grid-template-columns:32px 1fr;gap:12px}
 }
@@ -444,11 +443,46 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
       </div>
 
       <div class="outlink rv">
-        <div>
-          <h3>Графика, полиграфия и&nbsp;визуальные работы</h3>
-          <p>Ранние работы из&nbsp;ритейла и&nbsp;айдентика пока живут на&nbsp;Behance. Постепенно перенесу сюда то, что стоит показать полностью.</p>
-        </div>
-        <a class="btn btn-soft btn-lg" href="https://www.behance.net/sensore620" target="_blank" rel="noopener">Смотреть на&nbsp;Behance <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <h3>Графика, полиграфия и&nbsp;визуальные работы</h3>
+        <p>Здесь&nbsp;— обложки нескольких работ по&nbsp;айдентике, полиграфии и&nbsp;визуальному дизайну. Сюда переношу только превью, сами проекты целиком остаются на&nbsp;Behance&nbsp;— клик по&nbsp;скриншоту открывает нужный кейс там.</p>
+      </div>
+
+      <div class="pgrid three">
+        <a class="pcard is-external rv" href="https://www.behance.net/gallery/245732357/PolyNexus-Future-Composites" target="_blank" rel="noopener">
+          <div class="pc-shot pc-real" aria-hidden="true">
+            <div class="shot-frame"><img src="images/behance/polynexus.webp" alt="" loading="lazy"></div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-top"><span class="chip">Behance</span><span class="chip">Веб-сайт</span></div>
+            <h3>PolyNexus&nbsp;— Future Composites</h3>
+            <p class="pc-desc">Корпоративный сайт для мирового лидера в&nbsp;производстве полимерных композитов из&nbsp;углеволокна&nbsp;— сложную материаловедческую тему перевели в&nbsp;понятный UX для авиации, автопрома и&nbsp;промышленности.</p>
+            <span class="pc-link">Смотреть на&nbsp;Behance <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </div>
+        </a>
+
+        <a class="pcard is-external rv" href="https://www.behance.net/gallery/226533551/IDentika" target="_blank" rel="noopener">
+          <div class="pc-shot pc-real" aria-hidden="true">
+            <div class="shot-frame"><img src="images/behance/identika.webp" alt="" loading="lazy"></div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-top"><span class="chip">Behance</span><span class="chip">Платформа</span></div>
+            <h3>IDentika</h3>
+            <p class="pc-desc">Платформа управления цифровой идентичностью на&nbsp;блокчейне: децентрализованное хранение и&nbsp;защита конфиденциальных данных пользователя.</p>
+            <span class="pc-link">Смотреть на&nbsp;Behance <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </div>
+        </a>
+
+        <a class="pcard is-external rv" href="https://www.behance.net/gallery/102962781/mobilnoe-prilozhenie-mts-bezopasnoe-detstvo" target="_blank" rel="noopener">
+          <div class="pc-shot pc-real" aria-hidden="true">
+            <div class="shot-frame"><img src="images/behance/mts.webp" alt="" loading="lazy"></div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-top"><span class="chip">Behance</span><span class="chip">Мобильное приложение</span></div>
+            <h3>МТС. Безопасное детство</h3>
+            <p class="pc-desc">Мобильное приложение МТС для родительского контроля и&nbsp;безопасности детей.</p>
+            <span class="pc-link">Смотреть на&nbsp;Behance <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
