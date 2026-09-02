@@ -117,6 +117,8 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 .shot{background:var(--shot-canvas);border-radius:var(--r-lg);display:flex;padding:22px;min-height:340px;filter:var(--shot-dim);transition:filter .4s ease}
 .shot:hover{filter:none}
 .shot-frame{flex:1;background:var(--shot-surface);border:1px solid var(--shot-line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 26px -10px rgba(16,32,80,0.28)}
+.shot-real .shot-frame{display:block}
+.shot-img{width:100%;height:auto;object-position:top;display:block}
 .shot-bar{height:28px;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid var(--shot-line);flex-shrink:0}
 .shot-bar i{width:7px;height:7px;border-radius:50%;background:var(--shot-skel);display:block}
 .shot-bar .addr{margin-left:8px;height:7px;flex:1;max-width:160px;border-radius:4px;background:var(--shot-skel)}
@@ -302,8 +304,7 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 .shots{margin-top:48px;display:grid;gap:48px 44px}
 .shots.two{grid-template-columns:repeat(2,1fr)}
 .shots.three{grid-template-columns:repeat(3,1fr)}
-.fig .shot{min-height:0;aspect-ratio:16/10;padding:var(--shot-pad)}
-.shots.one .fig .shot{aspect-ratio:2/1}
+.fig .shot{min-height:0;padding:var(--shot-pad)}
 .fig figcaption{margin-top:13px;padding-left:var(--shot-pad);
   font-family:'JetBrains Mono',monospace;font-size:0.68rem;
   letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
@@ -333,7 +334,6 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
   .init-head{position:static}
   .shots{margin-top:30px}
   .shots,.shots.two,.shots.three{grid-template-columns:1fr;gap:34px}
-  .fig .shot,.shots.one .fig .shot{aspect-ratio:16/10}
   .contact-actions{grid-template-columns:1fr}
   .acc-trig,.acc-inner{grid-template-columns:32px 1fr;gap:12px}
 }
@@ -451,9 +451,9 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
         </div>
 
         <div class="shots three">
-        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row w45 acc"></div><div class="row"></div><div class="row w70"></div><div class="row tall"></div></div></div></div></div><figcaption>Ответы на частые вопросы</figcaption></figure>
-        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70"></div><div class="row tall acc"></div><div class="row w45"></div></div></div></div></div><figcaption>База знаний в карточках</figcaption></figure>
-        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row"></div><div class="row w45 acc"></div><div class="row tall"></div></div></div></div></div><figcaption>Дизайн-процесс в команде</figcaption></figure>
+        <figure class="fig"><div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/leadership/l01-otveti-na-voprosi.png" alt="" loading="lazy"></div></div><figcaption>Ответы на частые вопросы</figcaption></figure>
+        <figure class="fig"><div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/leadership/l02-baza-znani.png" alt="" loading="lazy"></div></div><figcaption>База знаний в карточках</figcaption></figure>
+        <figure class="fig"><div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/leadership/l03-design-process.png" alt="" loading="lazy"></div></div><figcaption>Дизайн-процесс в команде</figcaption></figure>
         </div>
       </article>
 
@@ -488,7 +488,7 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
         </div>
 
         <div class="shots one">
-        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70"></div><div class="row tall acc"></div><div class="row w45"></div></div></div></div></div><figcaption>Карта макетов в Figma</figcaption></figure>
+        <figure class="fig"><div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/leadership/l04-karta-maketov.png" alt="" loading="lazy"></div></div><figcaption>Карта макетов в Figma</figcaption></figure>
         </div>
       </article>
 
@@ -524,8 +524,8 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
         </div>
 
         <div class="shots two">
-        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row"></div><div class="row w45 acc"></div><div class="row tall"></div></div></div></div></div><figcaption>Титульный блок</figcaption></figure>
-        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row w30 acc"></div><div class="row tall"></div><div class="row w70"></div></div></div></div></div><figcaption>Страницы в файле</figcaption></figure>
+        <figure class="fig"><div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/leadership/l05-titulni-block.svg" alt="" loading="lazy"></div></div><figcaption>Титульный блок</figcaption></figure>
+        <figure class="fig"><div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/leadership/l06-stranici-v-faile.webp" alt="" loading="lazy"></div></div><figcaption>Страницы в файле</figcaption></figure>
         </div>
       </article>
 
@@ -562,9 +562,9 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
         </div>
 
         <div class="shots three">
-        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row w30 acc"></div><div class="row tall"></div><div class="row w70"></div></div></div></div></div><figcaption>Статусы компонентов</figcaption></figure>
-        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70 acc"></div><div class="row"></div><div class="row tall"></div></div></div></div></div><figcaption>Компонент «Поле»</figcaption></figure>
-        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row tall"></div><div class="row w45"></div><div class="row w70 acc"></div></div></div></div></div><figcaption>Компонент «Кнопка»</figcaption></figure>
+        <figure class="fig"><div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/leadership/l07-statusi-komponentov.svg" alt="" loading="lazy"></div></div><figcaption>Статусы компонентов</figcaption></figure>
+        <figure class="fig"><div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/leadership/l08-component-pole.svg" alt="" loading="lazy"></div></div><figcaption>Компонент «Поле»</figcaption></figure>
+        <figure class="fig"><div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/leadership/l09-component-knopka.svg" alt="" loading="lazy"></div></div><figcaption>Компонент «Кнопка»</figcaption></figure>
         </div>
       </article>
 
@@ -600,8 +600,8 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
         </div>
 
         <div class="shots two">
-        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row w70 acc"></div><div class="row"></div><div class="row tall"></div></div></div></div></div><figcaption>Чек-лист: UX</figcaption></figure>
-        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row tall"></div><div class="row w45"></div><div class="row w70 acc"></div></div></div></div></div><figcaption>Чек-лист: UI и организация макетов</figcaption></figure>
+        <figure class="fig"><div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/leadership/l10-check-list-UX.png" alt="" loading="lazy"></div></div><figcaption>Чек-лист: UX</figcaption></figure>
+        <figure class="fig"><div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/leadership/l11-check-list-UI.png" alt="" loading="lazy"></div></div><figcaption>Чек-лист: UI и организация макетов</figcaption></figure>
         </div>
       </article>
 
@@ -637,7 +637,7 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
         </div>
 
         <div class="shots one">
-        <figure class="fig"><div class="shot"><div class="shot-frame"><div class="shot-bar"><i></i><i></i><i></i><span class="addr"></span></div><div class="shot-body"><div class="shot-side"><b></b><b></b><b></b><b></b></div><div class="shot-main"><div class="row tall"></div><div class="row w45"></div><div class="row w70 acc"></div></div></div></div></div><figcaption>Таблица дизайн-ревью в Confluence</figcaption></figure>
+        <figure class="fig"><div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/leadership/l12-tablica-review.png" alt="" loading="lazy"></div></div><figcaption>Таблица дизайн-ревью в Confluence</figcaption></figure>
         </div>
       </article>
     </div>
