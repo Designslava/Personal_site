@@ -152,11 +152,8 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 .g-item.g-full{grid-column:span 6}
 .g-item.g-twothirds{grid-column:span 4}
 .g-item.g-third{grid-column:span 2}
-.g-item .shot{min-height:0;aspect-ratio:16/10;padding:18px}
-.g-item .shot.r-wide{aspect-ratio:16/9}
-.g-item .shot.r-pano{aspect-ratio:2/1}
-.g-item .shot.r-square{aspect-ratio:1/1}
-.g-item .shot.r-tall{aspect-ratio:4/5}
+.g-item .shot{min-height:0;padding:18px}
+.gallery .shot-img{height:auto}
 .g-item.g-side{display:grid;grid-template-columns:1.42fr .58fr;gap:44px;align-items:center}
 .g-item.g-side .g-cap{margin-top:0}
 .g-item.g-side.g-flip{grid-template-columns:.58fr 1.42fr}
@@ -231,7 +228,6 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
   .g-item,.g-item.g-full,.g-item.g-twothirds,.g-item.g-third{grid-column:auto}
   .g-item.g-side,.g-item.g-side.g-flip{grid-template-columns:1fr;gap:18px}
   .g-item.g-side .shot,.g-item.g-side.g-flip .shot{order:0}
-  .g-item .shot,.g-item .shot.r-pano,.g-item .shot.r-tall,.g-item .shot.r-square{aspect-ratio:16/10}
   .result-wrap{grid-template-columns:1fr;gap:28px}
   .contact-actions{grid-template-columns:1fr}
   .acc-trig,.acc-inner{grid-template-columns:32px 1fr;gap:12px}
@@ -362,7 +358,7 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 
       <div class="gallery">
         <div class="g-item g-full g-side rv">
-          <div class="shot r-wide shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/08/p08-01-proidenni-shag.png" alt="" loading="lazy"></div></div>
+          <div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/08/p08-01-proidenni-shag.png" alt="" loading="lazy"></div></div>
           <p class="g-cap"><b>Пройденный шаг.</b> В&nbsp;описании показываем ключевой атрибут&nbsp;— видно, что заполнено, без раскрытия. Вернуться и&nbsp;отредактировать можно всегда, часть шагов удаляется.</p>
         </div>
         <div class="g-item rv">
@@ -374,7 +370,7 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
           <p class="g-cap"><b>Валидация на переходе.</b> По&nbsp;нажатию «Продолжить» шаг проверяется. Дальше пускаем только после исправления&nbsp;— ошибка не&nbsp;доезжает до&nbsp;конца формы.</p>
         </div>
         <div class="g-item g-full g-side g-flip rv">
-          <div class="shot r-wide shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/08/p08-04-itogovi-document.png" alt="" loading="lazy"></div></div>
+          <div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/08/p08-04-itogovi-document.png" alt="" loading="lazy"></div></div>
           <p class="g-cap"><b>Итоговый документ.</b> На&nbsp;последнем шаге собирается документ целиком, а&nbsp;кнопка «Продолжить» превращается в&nbsp;«На&nbsp;утверждение».</p>
         </div>
       </div>
@@ -555,7 +551,6 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 
       <div class="foot-in">
         <span>© 2026 Вячеслав Журин · Продуктовый дизайнер</span>
-        <span>Черновой макет · кейс 08 · шаблон страницы кейса v1</span>
       </div>
     </div>
   </section>
