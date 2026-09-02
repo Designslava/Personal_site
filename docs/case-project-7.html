@@ -115,6 +115,8 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 
 /* ============ SHOT (заглушка скриншота — как на главной) ============ */
 .shot{background:var(--shot-canvas);border-radius:var(--r-lg);display:flex;padding:22px;min-height:340px;filter:var(--shot-dim);transition:filter .4s ease}
+/* DEMO: outline the padded canvas so it reads as a frame in light theme too — only on one gallery item for now */
+.shot-align-demo{border:1px solid var(--shot-line)}
 .shot:hover{filter:none}
 .shot-frame{flex:1;background:var(--shot-surface);border:1px solid var(--shot-line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 26px -10px rgba(16,32,80,0.28)}
 .shot-real .shot-frame{display:block}
@@ -347,7 +349,7 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
           <p class="g-cap"><b>Валидация без потери контекста.</b> Пользователь сразу видит, какое поле и&nbsp;почему заполнено неверно. Кнопка действия неактивна, пока ошибки не&nbsp;исправлены&nbsp;— документ уходит уже правильным.</p>
         </div>
         <div class="g-item rv">
-          <div class="shot shot-real"><div class="shot-frame"><img class="shot-img" src="images/cases/07/p07-02-poisk.webp" alt="" loading="lazy"></div></div>
+          <div class="shot shot-real shot-align-demo"><div class="shot-frame"><img class="shot-img" src="images/cases/07/p07-02-poisk.webp" alt="" loading="lazy"></div></div>
           <p class="g-cap"><b>Поиск агента внутри задачи.</b> Интегрировали поиск в&nbsp;рабочее пространство: фокус на&nbsp;задаче сохраняется, время на&nbsp;переключение между сервисами не&nbsp;тратится.</p>
         </div>
         <div class="g-item rv">
@@ -366,8 +368,8 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
   <section id="result" class="bleed-dark">
     <div class="container">
       <div class="result-wrap rv">
-        <div class="result-num">Выведено в ПРОМ<br><span>−7% к метрике скорости выполнения задачи</span></div>
-        <p class="result-text">Инструмент работает в&nbsp;промышленной эксплуатации. После добавления информеров для сотрудников с&nbsp;небольшим опытом метрика <b>«Скорость выполнения задачи» изменилась на&nbsp;7%</b>&nbsp;— формулировку метрики стоит уточнить перед публикацией.</p>
+        <div class="result-num">Выведено<br><span>в промышленную эксплуатацию</span></div>
+        <p class="result-text">Инструмент работает в&nbsp;промышленной эксплуатации. <b>Валидация не&nbsp;даёт перейти дальше с&nbsp;ошибкой</b>, поиск агента встроен прямо в&nbsp;задачу, а&nbsp;новым сотрудникам подсказывают свёрнутые инструкции и&nbsp;информеры.</p>
       </div>
     </div>
   </section>
@@ -536,7 +538,6 @@ section:not(.bleed-dark):not(.bleed-blue) + section:not(.bleed-dark):not(.bleed-
 
       <div class="foot-in">
         <span>© 2026 Вячеслав Журин · Продуктовый дизайнер</span>
-        <span>Черновой макет · кейс 07 · шаблон страницы кейса v1</span>
       </div>
     </div>
   </section>
