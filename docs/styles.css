@@ -604,7 +604,9 @@ h1.hero-title{font-size:clamp(2.35rem,5.7vw,4.9rem);max-width:21ch}
   .burger{display:flex}
   .hgroup .btn-soft{display:none}
   .hero{padding-top:calc(var(--sec-y) + 52px)}
-  .case-hero{padding-top:calc(var(--sec-y) + 52px)}
+  .case-hero{padding-top:calc(var(--sec-y) + 52px);padding-bottom:calc(var(--sec-y) * 0.3)}
+  .case-cover{margin-bottom:20px}
+  #brief{padding-bottom:calc(var(--sec-y) * 0.4)}
 }
 @media (max-width:600px){
   .carousel{--rx:126px;--ry:80px;--card-w:230px;--card-h:198px;--half:1}
